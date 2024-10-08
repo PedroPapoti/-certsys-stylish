@@ -1,89 +1,80 @@
-# Guia do Commit Amigão
+# Guia de Commits Eficientes
 
-```
-- Ow, o que este commit "whatever" faz?
-- Sei lá, abre o código aí.
-- Assim não, fera...
-```
+- O que esse commit "whatever" faz?
+- Não sei, abre o código para descobrir.
+- Isso não é ideal, certo?
 
 
-Já passou por isso? Uma tremenda mancada, não? Pega uma cadeira e vamos conversar sobre como escrever aquela mensagem de *Commit Amigável*.
+Já se encontrou nessa situação? É frustrante, não? Vamos conversar sobre como evitar isso e criar mensagens de *commit* claras e amigáveis.
 
-A premissa é simples: Sem padrão, o `git log` vira _aquela_ feira da fruta.
+A ideia é simples: sem um padrão, o `git log` se torna uma bagunça difícil de navegar.
 
-Vamos melhorar isso levando em consideração os seguintes pontos:
+Aqui estão os benefícios de seguir boas práticas de *commit*:
 
-* A navegação simplificada pelo histórico de commits
-* Manter um padrão entre os desenvolvedores
-* Passar o contexto da mudança
-* Ajudar na mantenabilidade do projeto em longo prazo
-* Facilitar a geração de `changelog`
+* Facilitar a navegação no histórico de *commits*;
+* Manter um padrão consistente entre os desenvolvedores;
+* Fornecer contexto claro para cada mudança;
+* Melhorar a mantenibilidade do projeto a longo prazo;
+* Facilitar a criação de *changelogs*.
 
+## Como criar um histórico de *commits* claro e eficiente?
 
-## Como alcançar este `log` que jorra leite e mel?
+O time deve seguir uma convenção que aborde os seguintes aspectos:
 
+### Estilo
+Defina regras claras para a sintaxe, gramática, capitalização e pontuação. Isso evita mal-entendidos e torna o processo mais simples e previsível.
 
-O time há de concordar com uma convenção que siga os seguintes aspectos:
+### Conteúdo
+Decida o que deve ser incluído no corpo da mensagem. Evite detalhes irrelevantes e foque no que realmente importa: **o que foi alterado** e **por que**.
 
-**Estilo**: sintaxe, gramática, capitalização, pontuação. Elabore essas coisas, remova o jogo de adivinhação e faça tudo o mais simples possível.
+### Metadados
+Estabeleça um padrão para rastrear referências, como números de *issues* ou *pull requests*, garantindo que todas as mudanças sejam corretamente vinculadas ao contexto de trabalho.
 
-**Conteúdo**: que tipo de informação deveria conter no corpo da mensagem de commit? ou se não deveria conter
-
-**Metadata**: como devemos rastrear as referencias das issues, por IDs, pull request ou o que deve ser utilizado como referencia?
-
-
-Pois depois de tudo que foi dito acima você gostaria de ver um log assim:
+Ao seguir essas diretrizes, seu log de *commits* pode se parecer com isso:
 
 ![](../images/good-commit-log.png)
 
-ao invés de algo similar a isto
+Em vez de algo confuso como:
 
 ![](../images/bad-commit-log.png)
 
+## Anatomia de um *Commit* Eficiente
 
-## Anatomia do Commit Amigão
+Adotar uma convenção clara é essencial. No nosso caso, seguimos o modelo do _Karma Commit Messages_.
 
-Já existem convenções bem estabelecidas. No nosso caso, usamos o petardo maravilhoso do _Karma Commit Messages_.
-
-*Formato Bonitão*
-
-```
-<tipo>(escopo): assunto
-
-<corpo>
-
-<rodapé>
-```
+### Formato Recomendado
 
 
 ### Assunto
 
-* Máximo de 50 caracteres
-* Tipo de escopo devem estar em letras minúsculas
-* Assunto deve estar no _imperativo_
+O assunto é a linha principal do *commit*. Deve ser conciso e descritivo.
+
+* Limite de 50 caracteres;
+* O tipo e escopo devem estar em letras minúsculas;
+* Use o verbo no imperativo.
 
 Exemplo:
 
-`feat(bregumelo): adiciona endpoint /whatever/`.
+`feat(autenticacao): adiciona endpoint /login/`.
 
-Os valores permitidos para o `tipo` são:
+#### Tipos Permitidos:
 
-* feat _(nova funcionalidade)_
-* style _(formatação geral no código. Não confundir com CSS)_
-* refactor _(refatoração de código de produção)_
-* test _(adicionar/refatorar testes)_
-* fix _(adivinha qual é esse)_
-* docs _(e esse também)_
-* chore _(atualização de tarefas ou código que não está relacionado a produção)_
-
+* **feat** – Nova funcionalidade;
+* **style** – Ajustes de formatação (não confundir com CSS);
+* **refactor** – Refatoração do código de produção;
+* **test** – Inclusão ou refatoração de testes;
+* **fix** – Correções de bugs;
+* **docs** – Alterações na documentação;
+* **chore** – Atualizações de tarefas ou códigos auxiliares que não afetam a produção.
 
 ### Corpo
 
+O corpo da mensagem de *commit* deve fornecer mais detalhes sobre a alteração.
 
-* Deve conter o `o que` e o `por que` ao invês de conter o `como` foi feito
-* Máximo de 80 caracteres
+* Deve explicar **o que foi alterado** e **por que**, ao invés de **como** foi feito;
+* Limite de 80 caracteres por linha.
 
-Se é necessário contextualizar o commit, explicar o porquê das mudanças, fique a vonts!
+Se a alteração precisa de mais contexto, use o corpo do *commit* para fornecer essa explicação.
 
 Exemplo:
 
@@ -94,25 +85,43 @@ refactor(bregumelo): modifica a chamada do model
 A chamada anterior sofreu alterações de contrato, logo, foi necessário
 refatorá-la.
 
-```
 
+Closes #123
+ ```
 
 ### Rodapé
 
-
-Basicamente, um indicador de metadados. Aqui você referencia quais issues estão relacionadas, qual issue este commit encerra e etc.
-
-```
-refactor(bregumelo): modifica a chamada do model
-
-A chamada anterior sofreu alterações de contrato, logo, foi necessário
-refatorá-la.
-
-Closes #123
-```
+O rodapé é usado para incluir metadados, como referências a *issues* ou *pull requests*. Isso é útil para rastrear as mudanças e relacioná-las com tickets ou tarefas específicas.
 
 
 ## Links
 
-
 * [Karma Commit Messages](http://karma-runner.github.io/1.0/dev/git-commit-msg.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

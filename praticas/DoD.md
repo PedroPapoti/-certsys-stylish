@@ -1,44 +1,21 @@
-# DoD - Defition of Done
-> For beautiful eyes, look for the good in others; 
-> for beautiful lips, speak only words of kindness; and for poise, 
-> walk with the knowledge that you are never alone.
+# Guia de Definição de Pronto (DoD)
 
-#### Overview
-O DoD é uma lista simples de atividades (códificar, comentários, teste unitários, teste de integração, etc.) 
-que adicionam valor ao produto. Concentrar-se em etapas de valor agregado permite que a equipe se concentre no que 
-deve ser concluído para criar software, ao mesmo tempo em que elimina atividades desperdiçadas que só 
-complicam os esforços do desenvolvimento de software.
+## Overview
+O **DoD** (Definition of Done) é uma lista clara de atividades (como codificação, testes unitários, testes de integração, etc.) que agregam valor ao produto. Ele ajuda a equipe a se concentrar no que deve ser concluído para entregar software de qualidade, eliminando atividades que não agregam valor e apenas complicam o desenvolvimento.
 
- > DoD é o principal mecanismo de relatórios para os membros da equipe.
+O DoD é o principal mecanismo de relatórios para os membros da equipe, permitindo que eles indiquem com clareza quando uma funcionalidade está "pronta". Com base no DoD, um membro da equipe pode efetivamente atualizar o time e o Product Owner (PO) sobre o estado de um item do backlog, garantindo que a entrega esteja alinhada com os critérios definidos.
 
-O relatório na sua forma mais simples é a capacidade de dizer, "Este recurso está pronto". 
-Afinal, um recurso ou Item do PB está feito ou não está feito. O DoD é um artefato simples que acrescenta 
-clareza à declaração "Feature's done". Usando o DoD como referência para essa conversa, um membro da equipe 
-pode efetivamente atualizar outros membros da equipe e o PO.
+## Por que queremos um DoD? E por que você precisa saber?
+A definição de pronto é independente dos critérios de aceitação do usuário (aceitação funcional), focando em assegurar a qualidade do recurso entregue, não apenas sua funcionalidade. O DoD é uma lista de verificação que captura atividades viáveis e valiosas que a equipe deve realizar em cada nível: funcionalidade, sprint e lançamento.
 
-[![N|Solid](../images/dod_image.png)]
+## O que temos no nosso DoD?
+- TDD (Test Driven Development)
+- BDD (Behavior Driven Development)
+- Qualidade de Código (Lint)
+- Code Review
+- Aprovação do PO
 
-#### Por que queremos um DoD? E por que você precisa saber?
-A definição de feito é ortogonal aos critérios de aceitação do usuário (aceitação funcional) para um recurso. 
-É uma lista de verificação abrangente das atividades necessárias, de valor agregado que afirmam a qualidade de 
-um recurso e não a funcionalidade desse recurso. A definição de feito é informada pela realidade, 
-onde captura atividades que podem ser cometidas realisticamente pela equipe para ser 
-completada em cada nível (recurso, sprint, lançamento).
-
-#### O que temos no nosso DoD?
- - TDD
- - BDD
- - Qualidade de Código (Lint)
- - Code Review
- - Aprovação do PO 
-
-
-### To-Dos
- - Sempre melhorar essa po*$a :godmode:
- - [Ver o DoR](DoR.md) :anger:
- - Ver o nosso [lindo Manifesto](TEAM_MANIFESTO.md) :panda_face:
-
-License
-----
-
-MITchel
+## To-Dos
+- Sempre melhorar nosso processo.
+- [Ver o DoR](DoR.md)
+- Revisar nosso [Manifesto da Equipe](TEAM_MANIFESTO.md) 

@@ -1,8 +1,4 @@
-# DoR - Defition of Ready
-> The more often we see the things around us - 
-> even the beautiful and wonderful things - the more they become invisible to us. 
-> That is why we often take for granted the beauty of this world: the flowers, the trees, the birds, the clouds 
-> even those we love. Because we see things so often, we see them less and less.
+# Guia de Definição de Pronto (DoR)- Defition of Ready
 
 #### Overview
 Numa definição de ready, o Product Owner quanto provedor de informação, deve receber dos membros do time o aceite sobre os 

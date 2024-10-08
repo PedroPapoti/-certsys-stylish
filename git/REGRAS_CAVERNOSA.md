@@ -1,42 +1,38 @@
-# Regras pra dar tudo certo
-Existem algumas regras para utilizar o git da maneira que o cumpade Washington sentiria orgulho. Sempre devemos manter em mente:
-* Trabalhe em uma feature branch.
-    
-    _Por que?:_
-    >Porque assim, todo o trabalho é feito de forma isolada em um branch dedicado, em vez do branch principal. Ele permite que você envie vários pull requests sem confusão. Você pode iterar sem poluir a master com código potencialmente instável e inacabado. [leia mais...](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
-* Crie a branch a partir de `develop`
-    
-    _Por que?:_
-    >Desta forma, você pode certificar-se de que o código na master quase sempre será construído sem problemas e pode ser usado para efetuar releases de forma automatizada (isso pode ser um exagero para alguns projetos).
+# Regras para um Fluxo de Trabalho Eficiente com Git
 
-* Nunca faça o push para `develop` ou `master`. Faça um [Pull Request Amigão](PULL_REQUEST_AMIGAO.md).
-    
 
-* Mantenha atualizado localmente a branch de `develop` e faça rebase interativo antes de enviar a feature branch e fazer um Pull Request.
+## Para garantir que o uso do Git seja eficiente e organizado, aqui estão algumas práticas recomendadas que você deve seguir para manter a integridade do repositório e o fluxo de trabalho limpo e escalável:
 
-    _Por que?:_
-    > O Rebase vai fazer o merge na branch local e aplicar os commits que você fez localmente no topo do histórico sem criar um commit de merge (assumindo que não houve conflitos). Resultando em um bom e limpo histórico [leia mais ...](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+1. Trabalhe em uma feature branch
+Por que isso é importante?
+Ao desenvolver em uma feature branch, você isola seu trabalho do branch principal, evitando interferências. Isso permite a criação de múltiplos pull requests sem confusão e protege a branch principal (como develop ou master) de receber código instável ou incompleto.
+Leia mais sobre feature branch workflow.
 
-* Resolva conflitos potenciais enquanto acontece o rebase e antes de fazer o Pull Request.
-* Exclua a branch localmente e no remoto.
-    
-    _Por que?:_
-    > Para não estragar sua lista de branches com branches mortas. Feature branches só devem existir enquanto está havendo desenvolvimento.
+2. Crie a branch a partir de develop
+Por que isso é importante?
+Iniciar sua feature branch a partir de develop garante que o código na master permaneça estável e pronto para produção. Essa prática facilita o processo de automação de releases, mesmo que alguns projetos possam não exigir essa abordagem.
 
-* Antes de fazer um Pull Request, Tenha certeza que a sua feature branch builda com sucesso e passa todos os testes (incluindo o code style lint).
-    
-    _Por que?:_
-    > Você está prestes a adicionar seu código a uma branch estável. Se os testes na sua feature branch falharem, existe uma grande chance que a sua branch de destinação falhe também. De forma adicional, você precisa aplicar a verificação do code style do projeto antes de fazer um Pull Request. Adiciona legibilidade ao código e reduz a chance de commits para arrumar e formatar o código que foi enviado com formatação errada, commitando somente funcionalidades com valor.
+3. Nunca faça push diretamente para develop ou master. Use um Pull Request Amigável
+Por que isso é importante?
+A prática de enviar diretamente para as branches principais pode introduzir código não revisado ou instável, comprometendo a estabilidade do projeto. Utilize sempre um pull request para garantir que as alterações sejam revisadas por outros desenvolvedores.
 
-* Use [esse `.gitignore`](./.gitignore)
-    
-    _Por que?:_
-    > Já existe uma lista de arquivos que não devem ser enviados com o código para o repo remoto. Além disso, exclui a configuração de pastas e arquivos para editores mais usados, bem como pastas de dependência mais comuns.
+4. Mantenha sua branch de develop atualizada e faça rebase interativo antes de enviar sua feature branch.
+Por que isso é importante?
+O rebase permite que você integre mudanças da develop na sua feature branch de maneira organizada, aplicando seus commits no topo do histórico. Isso evita a criação de múltiplos commits de merge, resultando em um histórico mais limpo.
+Saiba mais sobre merging vs rebasing.
 
-* Proteja a branch de `develop` e `master` com todas as suas forças de um bom marinheiro bebado
-  
-  ![Git](../images/protect-branches.jpg)
-    
-    _Por que?:_
-    > Isso protege suas branches com "código pronto" de receber mudanças inesperadas e irreversíveis. leia mais... [Github](https://help.github.com/articles/about-protected-branches/)
-    
+5. Resolva conflitos durante o rebase antes de fazer o pull request
+Por que isso é importante?
+Resolvendo os conflitos enquanto faz o rebase, você garante que o código esteja pronto para ser revisado e integrado à branch principal, evitando problemas no momento do pull request.
+
+6. Exclua a branch local e remotamente após a conclusão.
+Por que isso é importante?
+Ao excluir branches antigas, você mantém o repositório organizado e evita o acúmulo de branches obsoletas. As feature branches devem existir apenas durante o desenvolvimento ativo.
+
+7. Antes de criar um pull request, certifique-se de que sua feature branch passa nos testes e no build.
+Por que isso é importante?
+Antes de integrar o código em uma branch estável, é crucial garantir que ele esteja funcional e não introduza falhas. Isso inclui passar por todos os testes unitários e garantir que a verificação de estilo de código (lint) seja respeitada, promovendo a legibilidade e consistência do código.
+
+8. Utilize o arquivo .gitignore padronizado.
+Por que isso é importante?
+Esse arquivo contém uma lista de arquivos e pastas que não devem ser incluídos no repositório remoto, como configurações de IDEs e bibliotecas de dependências. Isso mantém o repositório limpo e focado apenas nos arquivos necessários.

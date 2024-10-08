@@ -1,25 +1,21 @@
 <h1 align="center">Certsys Stylish</h1>
- 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)![Made By Certsys](https://img.shields.io/badge/made%20by-CERTSYS-green.svg)
 
-![Git](./images/stylish_cs.jpg)
+
+<img src="./images/certsys.png" alt="Git" width="600">
 
 
 <p align="center">
-  :dark_sunglasses: Styleguides alegres e ousados da Certsys :dark_sunglasses:
+  🕶️ Certsys Style Guides 🕶️
 </p>
 
 ---
 
-> Iniciar um novo projeto, é um momento lindo e maravilhoso, manter o projeto e garantir que seja mantido toda a qualidade, estrutura e afins é muito phoda.
-Aqui segue a lista de luzes para vossos caminhos, escrito e utilizado (ou tetando...) aqui na [Certsys](http://certsys.com.br).
-Se você deseja compartilhar melhores práticas suas, ou acha que alguma dessas ideias de maconheiro deva ser removida, guarde pra você esse desejo! Brinks :smiley:, [sinta-se livre para mandar um pull request lindão](http://makeapullrequest.com).
+> Iniciar um novo projeto é sempre um momento importante, mas manter sua qualidade, estrutura e padrões ao longo do tempo é desafiador. Aqui estão os guias que seguimos na [Certsys](http://certsys.com.br) para ajudar a manter a consistência e a qualidade nos nossos projetos. Sinta-se à vontade para compartilhar suas próprias sugestões de boas práticas ou [enviar melhorias através de um pull request](http://makeapullrequest.com).
 
+## Guias disponíveis
 
-## Guias para a vida
-
-* [Guia do Git Campeão](git/README.md)
-* [Guia do Commit Amigão](git/COMMIT_CAMPEAO.md)
-* [Guia das Práticas Ninjas](praticas/README.md)
-* [README bom e safadão de Exemplo](readme/README.md)
-* [Manifesto +++ Lindo do Time (BORA fazer?)](praticas/TEAM_MANIFESTO.md)
+* [Guia do Git Certsys](git/README.md)
+* [Guia de Commits Eficientes](git/COMMIT_CAMPEAO.md)
+* [Guia de Boas Práticas de Desenvolvimento](praticas/README.md)
+* [Exemplo de README Claro e Eficaz](readme/README.md)
+* [Manifesto do Time](praticas/TEAM_MANIFESTO.md)

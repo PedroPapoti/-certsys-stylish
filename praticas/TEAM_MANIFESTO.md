@@ -1,1 +1,1 @@
-# Alguem faça, pelo o amor de Jeová 
+# Ninguém é tão pleno que não possa aprender; ninguém é tão júnior que não possa ensinar !!
